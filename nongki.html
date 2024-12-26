@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Nongkrong</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #145a32, #1e8449);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+        .card {
+            background: white;
+            color: #333;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: justify;
+            width: 350px;
+            animation: popIn 0.8s ease;
+        }
+        .card h1 {
+            color: #1b5e20;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .card .info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 10px 0;
+        }
+        .card .info strong {
+            flex-basis: 30%;
+        }
+        .card .info span {
+            flex-basis: 65%;
+            text-align: justify;
+        }
+        .map {
+            margin: 20px 0;
+        }
+        .map img {
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .map img:hover {
+            transform: scale(1.1);
+        }
+        button {
+            background: #1b5e20;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #0d4f1e;
+        }
+        @keyframes popIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>P Nongki!</h1>
+        <div class="info">
+            <strong>Kepada  :</strong>
+            <span id="to">Flascito 3</span>
+        </div>
+        <div class="info">
+            <strong>Tanggal:</strong>
+            <span id="date">Sabtu, 26 Desember 2024</span>
+        </div>
+        <div class="info">
+            <strong>Waktu:</strong>
+            <span id="time">Pukul 19:00 - elek</span>
+        </div>
+        <div class="info">
+            <strong>Tempat:</strong>
+            <span id="place">Klik Gambar Dibawah Untuk Lokasi Bosku</span>
+        </div>
+        <div class="map">
+            <a href="https://maps.app.goo.gl/yAKyV7crEWuxwsAr5" target="_blank">
+                <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1634025439/01j4zhjnp5gk05z74evhmwhgva.jpg" alt="Lokasi Map">
+            </a>
+        </div>
+        <button onclick="confirmAttendance()">Konfirmasi</button>
+    </div>
+    <script>
+        function confirmAttendance() {
+            const to = document.getElementById('to').textContent;
+            alert(`Terima kasih, ${to}, sudah mengkonfirmasi!`);
+        }
+    </script>
+</body>
+</html>
